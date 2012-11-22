@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block scripts %}{% endblock %}
+
+{% block content %}
+    <div class="user-details">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/yellow/">
+                        <i class="icon icon-arrow-left"></i>
+                        Home
+                    </a>
+                    <span class="divider">/</span>
+                </li>
+                <li>{{ user.firstname }} {{ user.lastname }}</li>
+            </ul>
+        </div>
+        <hr />
+        <div class="well">
+            <div class="row user-item">
+                <div class="span1">
+                    <span class="thumbnail">
+                        <img src="http://critterapp.pagodabox.com/img/user.jpg">
+                    </span>
+                </div>
+                <div class="span3">
+                    <p><strong>{{ user.firstname }} {{ user.lastname }}</strong></p>
+                    <span class="label label-info">
+                        <i class="icon-white icon-bell"></i>
+                        {{ user.phone }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
